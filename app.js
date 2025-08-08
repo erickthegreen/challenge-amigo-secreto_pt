@@ -45,3 +45,17 @@ function sortear() {
     resultado.innerHTML = amigoSorteado;
 }
 document.getElementById('botao-sortear').addEventListener('click', sortear);
+
+function reiniciar() {
+    // 1. Esvazia o array de amigos
+    amigos = [];
+    
+    // 2. Limpa o parágrafo da lista de amigos na tela
+    document.getElementById('lista-amigos').innerHTML = '';
+    
+    // 3. Limpa o parágrafo do resultado do sorteio na tela
+    document.getElementById('resultado').innerHTML = '';
+}
+
+// Conecta a nova função ao botão 'Reiniciar'
+document.getElementById('botao-reiniciar').addEventListener('click', reiniciar);
