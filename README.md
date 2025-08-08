@@ -1,25 +1,25 @@
-# 🎲 Jogo do Amigo Secreto
+Jogo do Amigo Secreto
 
 Um simples sorteador de amigo secreto desenvolvido como parte do Challenge ONE da Oracle e Alura para praticar conceitos fundamentais de JavaScript, HTML e CSS.
 
-## 📜 Descrição do Projeto
+Descrição do Projeto
 
 Esta é uma aplicação web interativa que permite a um grupo de amigos realizar o sorteio de um "amigo secreto". Os usuários podem adicionar os nomes dos participantes a uma lista e, com o clique de um botão, o sistema sorteia aleatoriamente um dos nomes e o exibe na tela.
 
-## ✨ Funcionalidades
+Funcionalidades
 
 - **Adicionar Nomes:** Permite inserir nomes de participantes em uma lista.
 - **Validação de Entrada:** Impede a adição de nomes vazios ou duplicados.
 - **Sortear:** Realiza um sorteio aleatório de um nome da lista.
 - **Reiniciar:** Limpa a lista de nomes e o resultado para um novo sorteio.
 
-## 🚀 Tecnologias Utilizadas
+Tecnologias Utilizadas
 
 - HTML5
 - CSS3
 - JavaScript
 
-## 🛠️ Como Usar
+Como Usar
 
 1. **Clone o repositório** ou baixe os arquivos.
 2. **Abra o arquivo `index.html`** no seu navegador de preferência.
@@ -29,11 +29,8 @@ Esta é uma aplicação web interativa que permite a um grupo de amigos realizar
 6. **Clique no botão "Sortear"** para ver o resultado.
 7. **Clique em "Reiniciar"** para começar um novo sorteio.
 
-## 📸 Screenshots
-
-![Tela inicial do projeto Amigo Secreto](screenshot.png)
 
 
-## 👨‍💻 Autor
+Autor
 
-Desenvolvido por [Seu Nome Aqui].   
+Desenvolvido por Erick Angel.   
