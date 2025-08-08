@@ -4,6 +4,7 @@ let amigos = [];
 function adicionar() {
     // Pegar os elementos do HTML
     let amigoInput = document.getElementById('nome-amigo');
+    // ID CORRIGIDO AQUI
     let lista = document.getElementById('lista-amigos');
 
     let nomeAmigo = amigoInput.value;
@@ -51,6 +52,7 @@ function reiniciar() {
     amigos = [];
     
     // 2. Limpa o parágrafo da lista de amigos na tela
+    // ID CORRIGIDO AQUI
     document.getElementById('lista-amigos').innerHTML = '';
     
     // 3. Limpa o parágrafo do resultado do sorteio na tela
@@ -59,3 +61,4 @@ function reiniciar() {
 
 // Conecta a nova função ao botão 'Reiniciar'
 document.getElementById('botao-reiniciar').addEventListener('click', reiniciar);
+// CHAVE EXTRA REMOVIDA DO FINAL
