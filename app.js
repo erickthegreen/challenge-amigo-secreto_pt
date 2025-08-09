@@ -25,7 +25,7 @@ function adicionar() {
     amigoInput.value = '';
     amigoInput.focus();
 }
-// Adiciona o "ouvinte de evento" de clique no botão
+// Conecta a função adicionar ao botão 'Adicionar'
 document.getElementById('botao-adicionar').addEventListener('click', adicionar);
 
 function sortear() {
@@ -48,17 +48,31 @@ function sortear() {
 document.getElementById('botao-sortear').addEventListener('click', sortear);
 
 function reiniciar() {
-    // 1. Esvazia o array de amigos
+    
     amigos = [];
     
-    // 2. Limpa o parágrafo da lista de amigos na tela
-    // ID CORRIGIDO AQUI
+    
     document.getElementById('lista-amigos').innerHTML = '';
     
-    // 3. Limpa o parágrafo do resultado do sorteio na tela
+    
     document.getElementById('resultado').innerHTML = '';
 }
 
 // Conecta a nova função ao botão 'Reiniciar'
 document.getElementById('botao-reiniciar').addEventListener('click', reiniciar);
-// CHAVE EXTRA REMOVIDA DO FINAL
+
+
+function remover() {
+    // Verifica se a lista não está vazia antes de remover
+    if (amigos.length > 0) {
+        // O método .pop() remove o último elemento do array
+        amigos.pop();
+
+        // Atualiza a exibição da lista na tela
+        document.getElementById('lista-amigos').textContent = amigos.join(', ');
+    } else {
+        alert('Não há amigos para remover!');
+    }
+}
+// Conecta a função remover ao botão 'Remover'
+document.getElementById('botao-remover').addEventListener('click', remover);
