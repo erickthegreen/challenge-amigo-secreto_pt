@@ -6,48 +6,65 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700;900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Amigo Secreto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:wght@900&display=swap" rel="stylesheet">
+    <title>Sorteador Mestre</title>
 </head>
-
 <body>
     <main class="main-content">
         <header class="header-banner">
-            <h1 class="main-title">Amigo Secreto</h1>
-            <img src="assets/amigo-secreto.png" alt="Imagem representativa de amigo secreto">
+            <h1 class="main-title">Sorteador do amigo secreto</h1>
+            <p class="subtitle">Crie seu sorteio de amigo secreto de forma simples e rápida!</p>
+            <p class="description">Adicione os participantes, sorteie um nome ou todos os pares de amigo secreto e compartilhe os resultados com seus amigos.</p>
         </header>
-        
-        <section class="input-section">
-            <h2 class="section-title">Digite o nome dos seus amigos</h2>
-            <div class="input-wrapper">
-                <input type="text" id="nome-amigo" class="input-name" placeholder="Digite um nome">
-                <button id="botao-adicionar" class="button-add">Adicionar</button>
-                <button id="botao-remover">Remover</button>
-<<<<<<< HEAD
-            </div>
-           
-            <ul id="lista-amigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
-            <div class="draw-result">
-                <h2>Sorteio</h2>
-                <div id="lista-sorteio"></div>
-=======
->>>>>>> parent of 184c045 (colocando a opção de tirar os nomes já sorteados.)
-            </div>
-           
-            <ul id="lista-amigos" class="name-list" aria-labelledby="listaAmigos" role="list"></ul>
-            <ul id="resultado" class="result-list" aria-live="polite"></ul>
 
-            <div class="button-container">
-                <button id="botao-sortear-todos">Sortear Amigo Secreto (Completo)</button>
-                <button id="botao-sortear-um">Sortear Apenas Um</button>
-                <button id="botao-limpar-sorteio">Limpar Sorteio</button>
+        <div class="content-container">
+
+            <section class="friends-section">
+                <h2 class="section-title">Adicione os participantes</h2>
+
+                <div class="input-wrapper">
+                    <input type="text" id="nome-amigo" placeholder="Digite um nome">
+                    <button id="botao-adicionar">Adicionar</button>
+                    <button id="botao-remover">Remover Último</button>
+                </div>
+
+                <div class="friends-list-container">
+                    <h3>Amigos na lista:</h3>
+                    <p id="lista-amigos"></p>
+                </div>
+
+                <hr> 
+                
+                <div class="add-list-section">
+                    <h3>Ou cole uma lista de nomes (separados por vírgula):</h3>
+                    <textarea id="lista-nomes-area" rows="4" placeholder="Ana, Beto, Carla, Daniel..."></textarea>
+                    <button id="botao-adicionar-lista">Adicionar da Lista</button>
+                </div>
+            </section>
+
+            <section class="draw-section-container">
+                <div class="draw-section">
+                    <h2 class="section-title">Sorteio de Nomes</h2>
+                    <button id="botao-sortear-um">Sortear um nome</button>
+                    <h3>Resultado:</h3>
+                    <p id="resultado-um" class="result-text"></p>
+                </div>
+
+                <div class="draw-section">
+                    <h2 class="section-title">Sorteio de Amigo Secreto</h2>
+                    <button id="botao-sortear-todos">Sortear todos os pares</button>
+                    <h3>Pares:</h3>
+                    <div id="resultado-todos" class="result-text"></div>
+                </div>
+            </section>
+
+            <p id="mensagens-erro" class="error-text"></p>
+            
+            <div class="restart-container">
                 <button id="botao-reiniciar">Reiniciar Jogo</button>
             </div>
-                
-                <button id="botao-reiniciar">Reiniciar</button>
-            </div>
-        </section>
-    </main>
+            
+        </div> </main>
 
     <script src="app.js"></script>
 </body>

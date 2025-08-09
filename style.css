@@ -1,14 +1,19 @@
+/* --- VARIÁVEIS DE CORES E FONTES --- */
 :root {
-    --color-primary: #4B69FD;
-    --color-secondary: #FFF9EB;
-    --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
-    --color-text: #444444;
-    --color-white: #FFFFFF;
+    --color-primary: #0d0c35; /* Um azul mais escuro para o fundo */
+    --color-secondary: #f0e6d2; /* Um bege claro para o container */
+    --color-button: #e67e22; /* Laranja para botões de ação */
+    --color-button-hover: #d35400; /* Laranja mais escuro */
+    --color-button-secondary: #7f8c8d; /* Cinza para botões secundários */
+    --color-button-secondary-hover: #95a5a6;
+    --color-text-dark: #34495e; /* Cinza azulado para texto */
+    --color-text-light: #ecf0f1; /* Quase branco para o header */
+    
+    --font-main: 'Inter', sans-serif;
+    --font-title: 'Merriweather', serif;
 }
 
-/* Estilos gerais */
+/* --- ESTILOS GERAIS --- */
 * {
     margin: 0;
     padding: 0;
@@ -16,147 +21,167 @@
 }
 
 body {
-    height: 100vh;
-    background-color: var(--color-primary);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* ... outras propriedades ... */
+    background-image: url('assets/amigo-secreto.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
+/* --- LAYOUT PRINCIPAL --- */
 .main-content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
     width: 100%;
 }
 
-/* Banner */
 .header-banner {
-    flex: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0 0;
+    padding: 2rem 1rem 6rem; /* Aumenta o espaçamento inferior para a sobreposição */
+    text-align: center;
 }
 
-/* Seção de entrada */
-.input-section {
-    flex: 60%;
-    background-color: var(--color-secondary);
-    border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    width: 100%;
+.header-banner img {
+    max-width: 250px;
+    margin-left: 2rem;
 }
 
-/* Títulos */
 .main-title {
-    font-size: 48px;
-    font-family: "Merriweather", serif;
-    font-weight: 900;
-    font-style: italic;
-    color: var(--color-white);
+    font-family: var(--font-title);
+    font-size: 3.5rem; /* rem é uma unidade flexível */
+    color: var(--color-text-light);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+}
+
+.content-container {
+    width: 50%;
+    max-width: 1000px;
+    margin: -80px auto 2rem; /* Centraliza e sobrepõe o header */
+    padding: 2rem;
+    background-color: rgba(240, 230, 210, 0.95); /* Bege com leve transparência */
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+/* --- SEÇÃO DE ADICIONAR AMIGOS --- */
+.friends-section, .draw-section-container, .restart-container {
+    margin-bottom: 2rem;
 }
 
 .section-title {
-    font-family: "Inter", serif;
-    font-size: 36px;
-    font-weight: 700;
-    color: var(--color-primary);
-    margin: 10px 0;
+    font-family: var(--font-title);
+    font-size: 2rem;
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
-/* Contêineres de entrada e botão */
-.input-wrapper {
+.input-wrapper, .add-list-section {
     display: flex;
     justify-content: center;
-    width: 100%;
-    max-width: 600px;
-    margin-top: 20px;
+    gap: 10px; /* Espaço entre os elementos */
+    margin-bottom: 1rem;
 }
 
-.input-name {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #000;
-    border-radius: 25px 0 0 25px;
-    font-size: 16px;
-}
-
-.button-container {
-    width: 300px;
-    justify-content: center;
-}
-
-/* Estilos de entrada de texto */
-.input-title {
-    flex: 1;
+input[type="text"], textarea {
+    flex-grow: 1; /* Faz o campo ocupar o espaço disponível */
     padding: 10px 15px;
-    font-size: 16px;
-    border: 2px solid #333;
-    border-right: none;
-    border-radius: 25px 0 0 25px;
-    font-family: "Merriweather", serif;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    font-size: 1rem;
 }
 
-/* Estilos de botão */
-button {
-    padding: 15px 30px;
-    font-family: "Inter", sans-serif;
-    font-size: 16px;
-    border: 2px solid #000;
-    border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
+textarea {
+    resize: vertical; /* Permite redimensionar apenas na vertical */
 }
 
-.button-add {
-    background-color: var(--color-tertiary);
-    color: var(--color-text);
-    border-radius: 0 25px 25px 0;
-}
-
-.button-add:hover {
-    background-color: #a1a1a1;
-}
-
-/* Listas */
-ul {
-    list-style-type: none;
-    color: var(--color-text);
-    font-family: "Inter", sans-serif;
-    font-size: 18px;
-    margin: 20px 0;
-}
-
-.result-list {
-    margin-top: 15px;
-    color: #05DF05;
-    font-size: 22px;
-    font-weight: bold;
+.friends-list-container {
     text-align: center;
 }
 
-/* Botão de sortear título */
-.button-draw {
+#lista-amigos {
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    min-height: 40px;
+}
+
+/* --- SEÇÃO DE SORTEIOS --- */
+.draw-section-container {
     display: flex;
-    align-items: center;
-    width: 100%;
-    padding: 10px 40px;
-    color: var(--color-white);
+    gap: 2rem;
+    flex-wrap: wrap; /* Permite que as seções quebrem em telas menores */
+}
+
+.draw-section {
+    flex: 1; /* Faz as duas seções de sorteio dividirem o espaço */
+    text-align: center;
+    padding: 1.5rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+}
+
+.draw-section h3 {
+    font-size: 1.2rem;
+    margin: 1rem 0 0.5rem;
+}
+
+.result-text {
+    font-size: 1.5rem; /* Fonte maior para os resultados */
+    font-weight: bold;
+    color: var(--color-primary);
+    min-height: 50px;
+}
+
+/* --- ESTILO DOS BOTÕES --- */
+button {
+    padding: 10px 20px;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: var(--color-button-secondary);
+    color: var(--color-text-light);
+}
+
+button:hover {
+    background-color: var(--color-button-secondary-hover);
+}
+
+/* Botões de ação principal */
+#botao-adicionar, #botao-adicionar-lista, #botao-sortear-um, #botao-sortear-todos {
     background-color: var(--color-button);
-    font-size: 16px;
 }
 
-.button-draw img {
-    margin-right: 40px;
-}
-
-.button-draw:hover {
+#botao-adicionar:hover, #botao-adicionar-lista:hover, #botao-sortear-um:hover, #botao-sortear-todos:hover {
     background-color: var(--color-button-hover);
+}
+
+.restart-container {
+    text-align: center;
+}
+
+/* Adicione estas novas regras no seu style.css */
+
+.subtitle {
+    color: var(--color-text-light); /* Usando a mesma cor clara do título principal */
+    font-size: 1.5rem;              /* Ajuste o tamanho como preferir */
+    font-weight: normal;            /* Deixa a fonte mais leve que o título */
+    margin-top: 1rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Adiciona uma sombra para facilitar a leitura */
+}
+
+.description {
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    font-weight: normal;
+    margin-top: 1rem;
+    max-width: 600px; /* Impede que a linha fique muito comprida em telas grandes */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
 }
