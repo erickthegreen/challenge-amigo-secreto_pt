@@ -1,7 +1,4 @@
-// Variável principal que armazena a lista de amigos
 let amigos = [];
-
-// --- DEFINIÇÃO DAS FUNÇÕES ---
 
 function adicionar() {
     let amigoInput = document.getElementById('nome-amigo');
@@ -22,6 +19,18 @@ function adicionar() {
     lista.textContent = amigos.join(', ');
     amigoInput.value = '';
     amigoInput.focus();
+}
+
+function sortearnome() {
+    if (amigos.length == 0) {
+        alert('Adicione amigos antes de sortear!');
+        return;
+    }
+
+    let indiceSorteado = Math.floor(Math.random() * amigos.length);
+    let amigoSorteado = amigos[indiceSorteado];
+    let resultado = document.getElementById('lista-sorteio');
+    resultado.innerHTML = `O amigo sorteado é: <strong>${amigoSorteado}</strong>`;
 }
 
 function sortear() {
@@ -62,15 +71,22 @@ function remover() {
     }
 }
 
+function limparSorteio() {
+    document.getElementById('lista-sorteio').innerHTML = '';
+}
+
 function reiniciar() {
     amigos = [];
     document.getElementById('lista-amigos').innerHTML = '';
     document.getElementById('resultado').innerHTML = '';
 }
 
-// --- CONEXÃO COM OS BOTÕES (EVENT LISTENERS) ---
 
 document.getElementById('botao-adicionar').addEventListener('click', adicionar);
-document.getElementById('botao-sortear').addEventListener('click', sortear);
 document.getElementById('botao-remover').addEventListener('click', remover);
 document.getElementById('botao-reiniciar').addEventListener('click', reiniciar);
+
+
+document.getElementById('botao-sortear-todos').addEventListener('click', sortearTodos);
+document.getElementById('botao-sortear-um').addEventListener('click', sortearUm);
+document.getElementById('botao-limpar-sorteio').addEventListener('click', limparSorteio);
