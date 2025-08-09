@@ -28,38 +28,43 @@ function adicionar() {
 // Conecta a função adicionar ao botão 'Adicionar'
 document.getElementById('botao-adicionar').addEventListener('click', adicionar);
 
+
 function sortear() {
-    // TAREFA 1: Validar que há amigos disponíveis
-    if (amigos.length == 0) {
-        alert('Adicione pelo menos um amigo antes de sortear!');
-        return; // Para a execução da função
+    // Validação para ter no mínimo 4 participantes
+    if (amigos.length < 4) {
+        alert('Adicione pelo menos 4 amigos para o sorteio!');
+        return;
     }
 
-    // TAREFA 2: Gerar um índice aleatório
-    let indiceSorteado = Math.floor(Math.random() * amigos.length);
+    // Embaralha a lista de amigos (Algoritmo de Fisher-Yates)
+    for (let i = amigos.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [amigos[i], amigos[j]] = [amigos[j], amigos[i]]; // Troca de elementos
+    }
 
-    // TAREFA 3: Obter o nome sorteado
-    let amigoSorteado = amigos[indiceSorteado];
+    let sorteio = document.getElementById('lista-sorteio');
+    sorteio.innerHTML = ''; // Limpa a lista antes de preencher
 
-    // TAREFA 4: Mostrar o resultado na tela
-    let resultado = document.getElementById('resultado');
-    resultado.innerHTML = amigoSorteado;
+    // Cria e exibe os pares
+    for (let i = 0; i < amigos.length; i++) {
+        // A condição para o último elemento da lista
+        if (i == amigos.length - 1) {
+            // O último da lista tira o primeiro
+            sorteio.innerHTML += amigos[i] + ' --> ' + amigos[0] + '<br>';
+        } else {
+            // Os outros tiram o próximo da lista
+            sorteio.innerHTML += amigos[i] + ' --> ' + amigos[i + 1] + '<br>';
+        }
+    }
 }
-document.getElementById('botao-sortear').addEventListener('click', sortear);
 
 function reiniciar() {
-    
-    amigos = [];
-    
-    
-    document.getElementById('lista-amigos').innerHTML = '';
-    
-    
-    document.getElementById('resultado').innerHTML = '';
-}
+        amigos = [];
+        document.getElementById('lista-amigos').innerHTML = '';
+        // Adicione esta linha para limpar a lista do sorteio também
+        document.getElementById('lista-sorteio').innerHTML = '';
+    }
 
-// Conecta a nova função ao botão 'Reiniciar'
-document.getElementById('botao-reiniciar').addEventListener('click', reiniciar);
 
 
 function remover() {
