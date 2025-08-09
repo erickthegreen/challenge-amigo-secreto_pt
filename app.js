@@ -21,6 +21,7 @@ function adicionar() {
     amigoInput.focus();
 }
 
+<<<<<<< HEAD
 function sortearnome() {
     if (amigos.length == 0) {
         alert('Adicione amigos antes de sortear!');
@@ -38,14 +39,19 @@ function sortear() {
     if (amigos.length < 4) {
         alert('Adicione pelo menos 4 amigos para o sorteio!');
         return;
+=======
+function sortear() {
+    // TAREFA 1: Validar que há amigos disponíveis
+    if (amigos.length == 0) {
+        alert('Adicione pelo menos um amigo antes de sortear!');
+        return; // Para a execução da função
+>>>>>>> parent of 184c045 (colocando a opção de tirar os nomes já sorteados.)
     }
 
-    // Embaralha a lista de amigos (Algoritmo de Fisher-Yates)
-    for (let i = amigos.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [amigos[i], amigos[j]] = [amigos[j], amigos[i]]; // Troca de elementos
-    }
+    // TAREFA 2: Gerar um índice aleatório
+    let indiceSorteado = Math.floor(Math.random() * amigos.length);
 
+<<<<<<< HEAD
     let sorteio = document.getElementById('lista-sorteio');
     sorteio.innerHTML = ''; // Limpa a lista de resultados anteriores
 
@@ -60,8 +66,35 @@ function sortear() {
             sorteio.innerHTML += amigos[i] + ' --> ' + amigos[i + 1] + '<br>';
         }
     }
+=======
+    // TAREFA 3: Obter o nome sorteado
+    let amigoSorteado = amigos[indiceSorteado];
+
+    // TAREFA 4: Mostrar o resultado na tela
+    let resultado = document.getElementById('resultado');
+    resultado.innerHTML = amigoSorteado;
+>>>>>>> parent of 184c045 (colocando a opção de tirar os nomes já sorteados.)
+}
+document.getElementById('botao-sortear').addEventListener('click', sortear);
+
+<<<<<<< HEAD
+=======
+function reiniciar() {
+    
+    amigos = [];
+    
+    
+    document.getElementById('lista-amigos').innerHTML = '';
+    
+    
+    document.getElementById('resultado').innerHTML = '';
 }
 
+// Conecta a nova função ao botão 'Reiniciar'
+document.getElementById('botao-reiniciar').addEventListener('click', reiniciar);
+
+
+>>>>>>> parent of 184c045 (colocando a opção de tirar os nomes já sorteados.)
 function remover() {
     if (amigos.length > 0) {
         amigos.pop();
