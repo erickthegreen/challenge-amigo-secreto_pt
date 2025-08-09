@@ -9,6 +9,7 @@ Esta é uma aplicação web interativa que permite a um grupo de amigos realizar
 Funcionalidades
 
 - **Adicionar Nomes:** Permite inserir nomes de participantes em uma lista.
+- **Remover Nomes:** Permite remover o último nome adicionado à lista.
 - **Validação de Entrada:** Impede a adição de nomes vazios ou duplicados.
 - **Sortear:** Realiza um sorteio aleatório de um nome da lista.
 - **Reiniciar:** Limpa a lista de nomes e o resultado para um novo sorteio.
@@ -25,9 +26,10 @@ Como Usar
 2. **Abra o arquivo `index.html`** no seu navegador de preferência.
 3. **Digite o nome** de um participante no campo de texto.
 4. **Clique no botão "Adicionar"** para incluir o nome na lista.
-5. **Repita** para todos os participantes.
-6. **Clique no botão "Sortear"** para ver o resultado.
-7. **Clique em "Reiniciar"** para começar um novo sorteio.
+5. **Se errar, clique em "Remover"** para apagar o último nome digitado.
+6. **Repita** o processo para todos os participantes.
+7. **Clique no botão "Sortear"** para ver o resultado.
+8. **Clique em "Reiniciar"** para começar um novo sorteio.
 
 
 
