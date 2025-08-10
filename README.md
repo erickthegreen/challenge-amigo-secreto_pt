@@ -37,6 +37,11 @@ Esta é uma aplicação web que permite a um grupo de amigos realizar dois tipos
 
 ## Demonstração
 
+<img width="1909" height="991" alt="Captura de tela 2025-08-10 110110" src="https://github.com/user-attachments/assets/4cf07d04-df72-4406-b861-84cb605aab8d" />
+<img width="1912" height="941" alt="Captura de tela 2025-08-10 110051" src="https://github.com/user-attachments/assets/bbf8cb49-52a8-4c33-83be-d9c928387f11" />
+<img width="1898" height="940" alt="Captura de tela 2025-08-10 110015" src="https://github.com/user-attachments/assets/e024d70b-a74b-4dd1-b8c1-8244c61faf4e" />
+<img width="1900" height="942" alt="Captura de tela 2025-08-10 105959" src="https://github.com/user-attachments/assets/d1141904-f523-4e3f-85f6-d9e25fb243c8" />
+<img width="1912" height="994" alt="Captura de tela 2025-08-10 105936" src="https://github.com/user-attachments/assets/5bfa99fe-71ed-4200-a1ff-3624794a73a9" />
 
 
 ##  Autor
