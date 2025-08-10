@@ -1,38 +1,44 @@
-Jogo do Amigo Secreto
+# Sorteador do amigo secreto: Amigo Secreto e Nomes Aleatórios
 
-Um simples sorteador de amigo secreto desenvolvido como parte do Challenge ONE da Oracle e Alura para praticar conceitos fundamentais de JavaScript, HTML e CSS.
+Um sorteador versátil desenvolvido como parte do Challenge ONE da Oracle e Alura. Este projeto aplica conceitos fundamentais de JavaScript, HTML e CSS para criar uma aplicação web interativa e com design responsivo.
 
-Descrição do Projeto
+## Descrição do Projeto
 
-Esta é uma aplicação web interativa que permite a um grupo de amigos realizar o sorteio de um "amigo secreto". Os usuários podem adicionar os nomes dos participantes a uma lista e, com o clique de um botão, o sistema sorteia aleatoriamente um dos nomes e o exibe na tela.
+Esta é uma aplicação web que permite a um grupo de amigos realizar dois tipos de sorteios: um sorteio de **Amigo Secreto completo**, onde todos os participantes são sorteados em pares, e um sorteio simples de **um único nome aleatório** de uma lista. A interface foi projetada para ser intuitiva e agradável, com um tema de fantasia.
 
-Funcionalidades
+## Funcionalidades
 
-- **Adicionar Nomes:** Permite inserir nomes de participantes em uma lista.
-- **Remover Nomes:** Permite remover o último nome adicionado à lista.
-- **Validação de Entrada:** Impede a adição de nomes vazios ou duplicados.
-- **Sortear:** Realiza um sorteio aleatório de um nome da lista.
-- **Reiniciar:** Limpa a lista de nomes e o resultado para um novo sorteio.
+- **Adicionar Nomes Individualmente:** Permite inserir nomes um por um.
+- **Adicionar Nomes em Lista:** Permite colar uma lista de nomes separados por vírgula para adição em massa.
+- **Remover o Último Nome:** Corrige erros de digitação de forma fácil.
+- **Validação Avançada:** Impede a adição de nomes vazios ou duplicados (ignorando maiúsculas/minúsculas).
+- **Dois Modos de Sorteio:**
+    - **Sorteio de Pares (Amigo Secreto):** Cria um ciclo completo onde cada participante sorteia outro, sem que ninguém se tire.
+    - **Sorteio de Nome Único:** Sorteia apenas um nome aleatório da lista de participantes.
+- **Reiniciar:** Limpa completamente a lista de nomes e os resultados para um novo jogo.
 
-Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
-- HTML5
-- CSS3
-- JavaScript
+- **HTML5:** Estruturação semântica do conteúdo.
+- **CSS3:** Estilização avançada, layout com Flexbox e variáveis para um tema coeso.
+- **JavaScript:** Manipulação do DOM, eventos, lógica de sorteios e validações.
 
-Como Usar
+## Como Usar
 
-1. **Clone o repositório** ou baixe os arquivos.
-2. **Abra o arquivo `index.html`** no seu navegador de preferência.
-3. **Digite o nome** de um participante no campo de texto.
-4. **Clique no botão "Adicionar"** para incluir o nome na lista.
-5. **Se errar, clique em "Remover"** para apagar o último nome digitado.
-6. **Repita** o processo para todos os participantes.
-7. **Clique no botão "Sortear"** para ver o resultado.
-8. **Clique em "Reiniciar"** para começar um novo sorteio.
+1. **Abra o arquivo `index.html`** no seu navegador ou acesse a versão publicada.
+2. **Adicione participantes** de duas formas:
+    - Digite um nome e clique em "Adicionar" (ou pressione Enter).
+    - Cole uma lista de nomes separados por vírgula na área de texto e clique em "Adicionar da Lista".
+3. **Use o botão "Remover Último"** se cometer algum erro.
+4. **Escolha o tipo de sorteio:**
+    - Clique em **"Sortear todos os pares"** para o Amigo Secreto completo.
+    - Clique em **"Sortear um nome"** para um sorteio simples.
+5. **Clique em "Reiniciar Jogo"** para limpar tudo e começar de novo.
 
+## Demonstração
 
+![Sorteador do amigo secreto](image_113006.png)
 
-Autor
+##  Autor
 
-Desenvolvido por Erick Angel.   
+Desenvolvido por Erick Angel.
