@@ -25,8 +25,6 @@ Esta é uma aplicação web que permite a um grupo de amigos realizar dois tipos
 
 ## Como Usar
 
-
-
 1. **Abra o arquivo `index.html`** no seu navegador ou acesse a versão publicada.
 2. **Adicione participantes** de duas formas:
     - Digite um nome e clique em "Adicionar" (ou pressione Enter).
