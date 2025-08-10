@@ -37,7 +37,7 @@ Esta é uma aplicação web que permite a um grupo de amigos realizar dois tipos
 
 ## Demonstração
 
-![Sorteador do amigo secreto](image_113006.png)
+
 
 ##  Autor
 
