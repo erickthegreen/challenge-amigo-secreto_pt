@@ -174,7 +174,7 @@ button:hover {
     font-size: 1.5rem;              /* Ajuste o tamanho como preferir */
     font-weight: normal;            /* Deixa a fonte mais leve que o título */
     margin-top: 1rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Adiciona uma sombra para facilitar a leitura */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.918); /* Adiciona uma sombra para facilitar a leitura */
 }
 
 .description {
